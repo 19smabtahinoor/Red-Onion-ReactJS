@@ -5,7 +5,24 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.header-banner {
+  background-image: url('../assets/bannerbackground.png');
+  height: 600px !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .banner {
   background-image: url('../assets/bannerbackground.png');
   background-repeat: no-repeat;
