@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "image": "./assets/Image/adult-blur-blurred-background-687824.png",
+    "icon": "./assets/ICON/Group 204.png",
+    "title": "Fast Delivery",
+    "description": "Keep your systems in sync with automated web hook bases notifications each tume link is paid and how we dream about our future."
+  },
+  {
+    "id": 2,
+    "image": "./assets/Image/chef-cook-food-33614.png",
+    "icon": "./assets/ICON/Group 1133.png",
+    "title": "A Good Auto Responder",
+    "description": "Keep your systems in sync with automated web hook bases notifications each tume link is paid and how we dream about our future."
+  },
+  {
+    "id": 3,
+    "image": "./assets/Image/architecture-building-city-2047397.png",
+    "icon": "./assets/ICON/Group 245.png",
+    "title": "Home Delivery",
+    "description": "Keep your systems in sync with automated web hook bases notifications each tume link is paid and how we dream about our future."
+  }
+]
