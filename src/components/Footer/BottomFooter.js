@@ -4,7 +4,7 @@ const BottomFooter = () => {
     return (
         <div className="flex items-center pt-8">
             <div className="flex flex-grow">
-                <span className="poppins text-gray-500">Copyrignt &copy; 2021 Online Food</span>
+                <span className="poppins text-gray-500">Developed by 💗 S.M.Abtahi Noor</span>
             </div>
 
             <div className="flex justify-end items-center space-x-6">
