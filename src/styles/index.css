@@ -16,6 +16,9 @@ body::-webkit-scrollbar-thumb {
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
 }
+.orderContainer::-webkit-scrollbar {
+  display: none;
+}
 .header-banner {
   background-image: url('../assets/bannerbackground.png');
   height: 600px !important;

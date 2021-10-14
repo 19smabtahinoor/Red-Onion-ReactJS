@@ -5,7 +5,6 @@ import Footer from '../components/Footer/Footer';
 import Banner from '../components/Header/Banner';
 
 const HomeScreen = () => {
-
     return (
         <>
             <Banner />

@@ -1,24 +1,19 @@
 import React, { useEffect, useState } from 'react';
+import useFetch from '../../hooks/useFetch';
 import FoodItem from './FoodItem';
 import Skeleton from './Skeleton';
 
 const Foods = () => {
-    const [foods, setFoods] = useState([])
     const [menuTab, setMenuTab] = useState('Breakfast')
     const [loading, setLoading] = useState(false)
+    const [foods] = useFetch();
 
     //loading 
     useEffect(() => {
         setLoading(true)
         setTimeout(() => {
             setLoading(false)
-        },3000)
-    },[])
-    //fetching foods data
-    useEffect(() => {
-        fetch('/foods.json')
-        .then(res=> res.json())
-            .then(data => setFoods(data))
+        },1000)
     },[])
 
     //food menu tab 
