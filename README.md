@@ -4,7 +4,7 @@ It is a single page application made with ReactJS, Tailwind CSS etc...
 
 ## Live Demo of this website :
 
-- [Live Site Link](https://red-onion-an.vercel.app/)
+- [Live Site Link](https://red-onion-restaurant-41dbe.web.app/)
 
 ## Technologies
 
