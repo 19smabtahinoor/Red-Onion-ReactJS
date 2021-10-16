@@ -1,12 +1,12 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDWjCegApMBNrfrw8w0op1FZd-GZR0SWdY",
-    authDomain: "red-onion-restaurant-41dbe.firebaseapp.com",
-    projectId: "red-onion-restaurant-41dbe",
-    storageBucket: "red-onion-restaurant-41dbe.appspot.com",
-    messagingSenderId: "117333265256",
-    appId: "1:117333265256:web:e6a076d00500a340dbe4dd"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID
 };
 
 // Initialize Firebase
