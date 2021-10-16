@@ -1,6 +1,7 @@
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { useEffect, useState } from 'react';
 import { useHistory } from "react-router-dom";
+import swal from 'sweetalert';
 import initializeAuthentication from '../config/firebase';
 
 
@@ -25,16 +26,16 @@ const useFirebase = () => {
     const signUpUser = (email, password, name, image) => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((res) => {
-                // const {displayName, photoURL, email} = res.user;
                 setUser(res.user)
                 updateProfile(auth.currentUser, {
                     displayName: name,
                     photoURL: image
                 }).then(() => {
+                    swal("Good job!", "Account has been created!", "success");
                     history.push('/');
                 })
 
-            }).catch(err => console.log(err.message))
+            }).catch(err => swal("Something went wrong!", `${err.message}`, "error"))
     }
 
     //sign in functionality
@@ -42,9 +43,10 @@ const useFirebase = () => {
         signInWithEmailAndPassword(auth, email , password)
         .then(res => {
             setUser(res.user);
+            swal("Sign in Successful!", "Welcome back !", "info")
             history.push('/');
         })
-        .catch(err => console.log(err.message))
+            .catch(err => swal("Something went wrong!", `${err.message}`, "error"))
     }
 
 
@@ -54,6 +56,7 @@ const useFirebase = () => {
         signInWithPopup(auth, googleProvider)
         .then(res => {
             setUser(res.user);
+            swal("Good job!", "Account has been created!", "success");
             history.push('/');
         }).catch(err => console.log(err.message))
     }
@@ -62,9 +65,10 @@ const useFirebase = () => {
     const signOutUser = () => {
         signOut(auth).then(() => {
             setUser({});
+            swal("Logout Successful!", "You are logged out!", "success");
             history.push('/signin')
         }).catch((err) => {
-            console.log(err.message)
+            swal("Something went wrong!", `${err.message}`, "error")
         });
     }
 

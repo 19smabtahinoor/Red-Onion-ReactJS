@@ -5,9 +5,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.orderContainer::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  width: 5px;
+  display: none;
 }
+/* .orderContainer::-webkit-scrollbar,
 body::-webkit-scrollbar-thumb {
   background: #ddd;
   border-radius: 50px;
@@ -16,9 +18,10 @@ body::-webkit-scrollbar-thumb {
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
 }
-.orderContainer::-webkit-scrollbar {
+/* .orderContainer::-webkit-scrollbar {
   display: none;
-}
+} */
+
 .header-banner {
   background-image: url('../assets/bannerbackground.png');
   height: 600px !important;
@@ -43,4 +46,13 @@ body::-webkit-scrollbar-thumb {
 }
 .text-primary {
   color: #f91944;
+}
+
+/* Glassmorphism card effect */
+.glass {
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.57);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
 }

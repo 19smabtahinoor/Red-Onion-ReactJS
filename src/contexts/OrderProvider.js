@@ -7,34 +7,32 @@ export const useOrder = () => {
 }
 const OrderProvider = ({ children }) => {
     const [order, setOrder] = useState([]);
-    // const [quantity, setQuantity] = useState(1)
 
-    // handle order function 
+    // add order function 
     const handleOrder = (food) => {
         setOrder((prevValue) => {
             return [
                 ...prevValue,
-                food
+                food, 
             ]
         })
     }
 
-    // //handle Order Quantity 
-    // const handleOrderDescrease = () => {
-    //     if(quantity === 1){
-    //         setQuantity(1)
-    //     }else{
-    //         setQuantity(quantity - 1)
-    //     }
-    // }
-    // const handleOrderIncrease = () => {
-    //     setQuantity(quantity + 1)
-    // }
+    //remove order from cart 
+    const removeOrder = (id) => {
+        setOrder((prev) => {
+            return prev.filter(item => {
+                return item.id !== id
+            })
+        })
+    }
+
 
     const value = {
+        setOrder,
         order,
         handleOrder,
-
+        removeOrder
     }
     return (
         <OrderContext.Provider value={value}>
