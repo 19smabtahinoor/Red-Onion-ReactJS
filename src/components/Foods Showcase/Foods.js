@@ -32,8 +32,8 @@ const Foods = () => {
 
             {/* all foods  */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
-                {foods.filter((item) => menuTab === item.type).map(item => (
-                    loading ? <Skeleton key={item.id} /> : <FoodItem key={item.id} {...item} />
+                {foods.filter((item) => menuTab === item.foodType).map(item => (
+                    loading ? <Skeleton key={item._id} /> : <FoodItem key={item._id} {...item} />
                 ))}
             </div>
         </section>

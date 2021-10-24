@@ -6,7 +6,7 @@ const AddProductScreen = () => {
     return (
         <section>
             {/* heading  */}
-            <Heading />
+            <Heading text="Add Product" />
 
             {/* form  */}
             <div>
