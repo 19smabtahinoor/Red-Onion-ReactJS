@@ -9,18 +9,6 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
-/* .orderContainer::-webkit-scrollbar,
-body::-webkit-scrollbar-thumb {
-  background: #ddd;
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
-}
-/* .orderContainer::-webkit-scrollbar {
-  display: none;
-} */
 
 .header-banner {
   background-image: url('../assets/bannerbackground.png');
@@ -46,6 +34,9 @@ body::-webkit-scrollbar-thumb {
 }
 .text-primary {
   color: #f91944;
+}
+.border-primary {
+  border: 1px solid #f91944;
 }
 
 /* Glassmorphism card effect */

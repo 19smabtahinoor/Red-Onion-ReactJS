@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Admin from './Admin/Admin';
 import Navbar from './components/Navbar/Navbar';
 import AuthProvider from './contexts/AuthProvider';
 import DeliveryProvider from './contexts/DeliveryProvider';
@@ -20,16 +21,17 @@ const App = () => {
       <AuthProvider>
         <OrderProvider>
           <DeliveryProvider>
-          <Navbar />
-          <Switch>
-            <Route exact path="/"><HomeScreen /></Route>
-            <PublicRoute exact path="/signin"><SignInScreen /></PublicRoute>
-            <PublicRoute exact path="/signup"><SignUpScreen /></PublicRoute>
-            <PrivateRoute exact path="/foods/:title"><FoodDetailScreen /></PrivateRoute>
-            <PrivateRoute exact path="/orders"><PlaceOrderScreen /></PrivateRoute>
-            <PrivateRoute exact path="/order-successful"><OrderSuccessfulScreen /></PrivateRoute>
-            <Route  path="*"><ErrorScreen /></Route>
-          </Switch>
+            <Navbar />
+            <Switch>
+              <Route exact path="/"><HomeScreen /></Route>
+              <PublicRoute exact path="/signin"><SignInScreen /></PublicRoute>
+              <PublicRoute exact path="/signup"><SignUpScreen /></PublicRoute>
+              <PrivateRoute exact path="/foods/:title"><FoodDetailScreen /></PrivateRoute>
+              <PrivateRoute exact path="/orders"><PlaceOrderScreen /></PrivateRoute>
+              <PrivateRoute exact path="/order-successful"><OrderSuccessfulScreen /></PrivateRoute>
+              <PrivateRoute exact path="/admin"><Admin /></PrivateRoute>
+              <Route path="*"><ErrorScreen /></Route>
+            </Switch>
           </DeliveryProvider>
         </OrderProvider>
       </AuthProvider>
