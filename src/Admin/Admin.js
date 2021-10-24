@@ -3,6 +3,7 @@ import { BrowserRouter, Switch } from 'react-router-dom';
 import AuthProvider from '../contexts/AuthProvider';
 import PrivateRoute from '../routes/PrivateRoute';
 import AddProductScreen from './AddProductScreen';
+import EditProductScreen from './EditProductScreen';
 import ManageProductScreen from './ManageProductScreen';
 import SideNav from './SideNav';
 
@@ -21,6 +22,9 @@ const Admin = () => {
                             </PrivateRoute>
                             <PrivateRoute exact path="/admin/add">
                                 <AddProductScreen />
+                            </PrivateRoute>
+                            <PrivateRoute exact path="/admin/edit/:id">
+                                <EditProductScreen />
                             </PrivateRoute>
                         </Switch>
                     </div>
