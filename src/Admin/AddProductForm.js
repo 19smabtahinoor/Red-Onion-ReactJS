@@ -42,7 +42,6 @@ const AddProductForm = () => {
             })
     }
 
-
     return (
         <>
             <form className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10 mt-6" onSubmit={handleSubmit}>

@@ -36,8 +36,6 @@ const FoodDetailScreen = () => {
                                 <div className="flex items-center border border-gray-200 px-4 py-2 space-x-6 rounded-full">
                                     <AiOutlineMinus onClick={() => {
                                         quantity === 1 ? setQuantity(1) : setQuantity(quantity - 1);
-                                        // setOrderPrice(food.price * quantity);
-                                        // food.price = orderPrice;
                                     }}
                                         className="text-2xl bg-primary w-8 h-8 rounded-full text-white hover:scale-105 transform transition duration-500 cursor-pointer p-1"
                                     />
@@ -45,8 +43,6 @@ const FoodDetailScreen = () => {
 
                                     <AiOutlinePlus onClick={() => {
                                         setQuantity(quantity + 1);
-                                        // setOrderPrice(food.price * quantity);
-                                        // food.price += orderPrice;
                                     }}
                                         className="text-2xl bg-primary w-8 h-8 rounded-full text-white hover:scale-105 transform transition duration-500 cursor-pointer p-1"
                                     />
@@ -72,7 +68,7 @@ const FoodDetailScreen = () => {
                         </div>
                         {/* right side  */}
                         <div className="order-1 md:order-2 lg:order-2">
-                            <img src={`../../${food.image}`} className="w-3/4 md:w-3/4 lg:w-full mx-auto" alt="food" />
+                            <img src={food.image} className="w-3/4 md:w-3/4 lg:w-full mx-auto" alt="food" />
                         </div>
                     </div>
                 </div>

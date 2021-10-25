@@ -13,6 +13,8 @@ const PlaceOrderScreen = () => {
     const { input, disabled } = useDelivery();
     const history = useHistory();
 
+    console.log(order);
+    
     return (
         <main className=" h-screen banner">
             <div className="max-w-screen-xl py-20 mx-auto px-6">
@@ -30,7 +32,7 @@ const PlaceOrderScreen = () => {
                                     {/* order details  */}
                                     <div className="flex flex-col space-y-4 mb-3">
                                         <p className="poppins text-gray-700">Deliver Place :  <span className="font-semibold text-black">{input.country ? `${input.country}` : '-----'}</span></p>
-                                        <p className="poppins text-gsray-700">Ariving in 20-30 min</p>
+                                        <p className="poppins text-gray-700">Arriving in 20-30 min</p>
                                         <p className="poppins text-gray-700">Road <span className="font-semibold text-black">{input.roadNo ? `${input.roadNo}` : '-----'}</span> </p>
                                         <p className="poppins text-gray-700">Floor :  <span className="font-semibold text-black">{input.flatno ? `${input.flatno}` : '-----'}</span> </p>
                                         <p className="poppins text-gray-700">Deliver to :  <span className="font-semibold text-black">{input.name ? `${input.name}` : '-----'}</span> </p>
@@ -53,7 +55,7 @@ const PlaceOrderScreen = () => {
                                             <button disabled="disabled" className="w-full px-6 py-3 rounded-lg bg-primary text-white poppins ring-red-300 focus:ring-4 transition duration-500 opacity-40">Place Order</button>
                                         ) : (
                                             <button className="w-full px-6 py-3 rounded-lg bg-primary text-white poppins ring-red-300 focus:ring-4 transition duration-500" onClick={() => {
-                                                swal("Congratualations!!!", `You have order ${order.length} times successfully`, "success")
+                                                swal("Congratulations!!!", `You have order ${order.length} times successfully`, "success")
                                                 history.push('/order-successful');
                                                 setOrder([]);
                                             }}>Place Order</button>
