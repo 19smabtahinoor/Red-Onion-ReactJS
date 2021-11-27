@@ -17,6 +17,16 @@ It is a single page application made with ReactJS, Tailwind CSS etc...
 [![Vercel Badge](https://img.shields.io/badge/vercel-000?style=for-the-badge&logo=vercel&logoColor=white)](https://github.com/19smabtahinoor)
 [![Vs Code Badge](https://img.shields.io/badge/Visual_Studio_Code-0078D6?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://github.com/19smabtahinoor)
 
+## Features
+
+- Red Onion Restaurant is a restaurant website  where you can order different kinds of foods..
+- Implemented an awesome user interface  with React JS and Tailwind CSS..
+- Implemented User Authentication with Firebase Auth.
+- Implemented a thing where users add their delivery details and then they can place their orders.
+- Implemented increase order quantity.
+- Many other features that you can see from the live site.
+
+
 ## 💻 Developed By
 
 ![Developer PIC](https://avatars.githubusercontent.com/u/73340940?s=48&v=4)
